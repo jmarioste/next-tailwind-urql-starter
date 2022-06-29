@@ -1,6 +1,6 @@
-/** @type {import('next').NextConfig} */
-
 const withPreact = require("next-plugin-preact");
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   webpack(config) {
@@ -10,6 +10,14 @@ const nextConfig = {
     });
 
     return config;
+  },
+  rewrites() {
+    return [
+      {
+        source: "/graphql",
+        destination: `${process.env.API_URL_BASE}/graphql`,
+      },
+    ];
   },
 };
 

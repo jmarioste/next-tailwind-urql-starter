@@ -1,6 +1,12 @@
+import { useMeQuery } from "graphql/user.gql";
 import React from "react";
 import Hero from "./Hero.svg";
 const Home = () => {
+  const [{ data, fetching, error }] = useMeQuery({});
+
+  console.log(data);
+  console.log(fetching);
+  console.log(error);
   return (
     <div className="container mx-auto px-4 my-2">
       <div className="grid grid-cols-1 md:grid-cols-2 ">
@@ -16,7 +22,21 @@ const Home = () => {
             <div className="rounded-md shadow">
               <a
                 href="#"
-                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                className="
+                w-full flex 
+                items-center 
+                justify-center 
+                px-8 py-3 border 
+                border-transparent 
+                text-base 
+                font-medium 
+                rounded-md 
+                text-white 
+                bg-indigo-600 
+                hover:bg-indigo-700 
+                md:py-4 
+                md:text-lg 
+                md:px-10"
               >
                 Get started
               </a>
