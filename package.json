@@ -16,7 +16,7 @@
     "graphql": "15.x",
     "jsonwebtoken": "^8.5.1",
     "next": "^12.1.6",
-    "next-auth": "^4.6.1",
+    "next-auth": "^4.10.3",
     "next-plugin-preact": "^3.0.7",
     "preact": "^10.8.2",
     "preact-render-to-string": "^5.2.0",
